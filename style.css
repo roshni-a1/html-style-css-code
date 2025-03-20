@@ -1,0 +1,199 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #141E30, #243B55, #ff416c, #ff4b2b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff4b2b;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Headings */
+h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 400;
+    color: #ffcc70;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Services List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    padding: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    color: #ff4b2b;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 75, 43, 0.5);
+}
+
+/* Images */
+img {
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Audio Element */
+audio {
+    margin-top: 15px;
+}
+
+/* SVG Circle */
+svg circle {
+    stroke-width: 4;
+    transition: fill 0.3s ease;
+}
+
+svg:hover circle {
+    fill: #ffcc70;
+}
+
+/* Dark Mode Styles */
+body.light-mode {
+    background: #ffffff;
+    color: #333;
+}
+
+.darkModeCheckbox {
+    display: none;
+}
+
+.darkModeLabel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff4b2b;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.darkModeCheckbox:checked ~ .darkModeLabel {
+    background: #ffcc70;
+}
+
+.darkModeCheckbox:checked ~ body {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    input {
+        width: 80%;
+    }
+}
